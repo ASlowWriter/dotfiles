@@ -10,7 +10,7 @@ function clone
 	cd $DIR
 
 	if test -f .pre-commit-config.yaml;
-	    pre-commit install
+	    prek install
 	end
     end
 
