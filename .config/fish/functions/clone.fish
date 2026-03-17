@@ -9,7 +9,7 @@ function clone
     if test -d $DIR; 
 	cd $DIR
 
-	if test -f .pre-commit-config.yaml;
+	if test -f .pre-commit-config.yaml || test -f prek.toml;
 	    prek install
 	end
     end
