@@ -83,3 +83,12 @@ end
 
 -- Example keybinding (Ctrl‑w o like Vim’s window‑only command)
 vim.keymap.set('n', '<Leader>fC', close_others, { desc = 'Close all other buffers' })
+
+vim.keymap.set('n', '<Leader>qq', ':cclose<cr>', { desc = 'Close Quicklist' })
+vim.keymap.set('n', '<Leader>ql', ':lclose<cr>', { desc = 'Close Locationlist' })
+
+-- make D delete into the void register
+vim.api.nvim_set_keymap('n', 'D', '"_d', { noremap = true })
+
+-- Visual mode paste without overwriting registers
+vim.api.nvim_set_keymap('v', 'p', '"_dP', { noremap = true, silent = true })
