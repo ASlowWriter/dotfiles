@@ -20,13 +20,17 @@ return {
           require 'rustaceanvim.neotest',
         },
 
-        vim.keymap.set('n', '<leader>nl', function()
-          require('neotest').run.run_last()
-        end),
+        vim.keymap.set('n', '<leader>ta', function()
+          require('neotest').run.run(vim.fn.getcwd())
+        end, { desc = 'Rerun all tests' }),
 
-        vim.keymap.set('n', '<leader>nt', function()
+        vim.keymap.set('n', '<leader>tl', function()
+          require('neotest').run.run_last()
+        end, { desc = 'Rerun last test' }),
+
+        vim.keymap.set('n', '<leader>tr', function()
           require('neotest').run.run()
-        end),
+        end, { desc = 'Run current Test' }),
       }
     end,
   },
