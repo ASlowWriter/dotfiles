@@ -89,6 +89,7 @@ vim.keymap.set('n', '<Leader>ql', ':lclose<cr>', { desc = 'Close Locationlist' }
 
 -- make D delete into the void register
 vim.api.nvim_set_keymap('n', 'D', '"_d', { noremap = true })
+vim.api.nvim_set_keymap('n', 'C', '"_c', { noremap = true })
 
 -- Visual mode paste without overwriting registers
 vim.api.nvim_set_keymap('v', 'p', '"_dP', { noremap = true, silent = true })
